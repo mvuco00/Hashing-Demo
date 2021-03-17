@@ -1,11 +1,9 @@
 import crypto from "crypto";
 export const sendHash = (req, res) => {
   let data = req.body;
-  console.log(data);
   if (data !== "") {
     res.status(200).send({
-      hash:
-        crypto.createHash("sha256").update(data.text).digest("hex") + "HASH",
+      hash: crypto.createHash("sha256").update(data.text).digest("hex"),
     });
   } else {
     res.status(200).send({ message: data + "ENTER SMTH" });

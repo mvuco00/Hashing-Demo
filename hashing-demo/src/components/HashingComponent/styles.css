@@ -1,0 +1,12 @@
+.hashingComponent {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 40px;
+}
+
+.resultBox {
+  display: flex;
+  flex-direction: column;
+}
