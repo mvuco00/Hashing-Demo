@@ -10,6 +10,9 @@ const Navigation = () => {
         <NavLink to="/" activeClassName="active">
           Hash
         </NavLink>
+		<NavLink to="/mining" activeClassName="active">
+          Mining
+        </NavLink>
       </div>
     </div>
   );

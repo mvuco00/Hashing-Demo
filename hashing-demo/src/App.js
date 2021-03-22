@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import "./App.css";
 import Home from "./components/Home/Home";
+import Mining from './components/Mining/Mining'
 import {
   BrowserRouter as Router,
   Route,
@@ -14,7 +15,8 @@ const App = () => {
     <Router>
       <Layout>
         <Switch>
-          <Route path="/" exact component={Home} />
+		  <Route path="/mining" exact component={Mining} />
+          <Route path="/" exact component={Home} />		  
           <Redirect to="/" />
         </Switch>
       </Layout>

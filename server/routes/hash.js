@@ -5,4 +5,5 @@ const router = express.Router();
 router.get("/", getData);
 router.post("/", sendHash);
 
+
 export default router;
