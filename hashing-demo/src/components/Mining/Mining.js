@@ -4,17 +4,34 @@ import Box from "@material-ui/core/Box";
 import axios from "axios";
 import "./styles.css";
 import { Button } from '@material-ui/core';
+import Result from '../HashingComponent/Result/Result'
 
 const url = "http://localhost:5000/mine";
 
 const Mining = () => {
 	const [blockNumber, setBlockNumber] = useState(1)
 	const [data, setData] = useState('')
+	const [hash, setHash] = useState('')
+	const [nonce, setNonce] = useState('')
+	const [loading, setLoading] = useState(false)
 
 	const handleSubmit = (e) => {
-		e.preventDefault()
-		console.log(blockNumber, data)
+		e.preventDefault();
+		setLoading(true);
+		axios
+		.post(url,{data, blockNumber}).then((res) => {
+			setHash(res.data.hash);
+			setNonce(res.data.nonce);
+			setLoading(false);
+		})
+		.catch((err) => {
+			setLoading(false)
+		  	console.log(err);
+		  
+		});
+		
 	}
+
 	return (
 		<div className='miningComponent'>
 			 <Box width="80%">
@@ -26,7 +43,10 @@ const Mining = () => {
 					color="primary"
 					fullWidth
 					value={blockNumber}
-					onChange={(e)=>setBlockNumber(e.target.value)}
+					onChange={(e)=>setBlockNumber(parseInt(e.target.value,10))}
+					style={{			
+						marginTop: "10px",					
+					  }}
 				/>
 				<TextField
 					id="outlined-secondary"
@@ -35,10 +55,22 @@ const Mining = () => {
 					color="primary"
 					fullWidth				
 					onChange={(e) => setData({ text: e.target.value })}
+					style={{			
+						marginTop: "10px",					
+					  }}
 				/>
 				<Button type='submit'>Mine</Button>
 				</form>			
 			</Box>
+
+			{loading?<div>Calculating the puzzle...</div>:nonce!=='' && hash!==''? (
+				<>
+					<Result title={'nonce'} hash={nonce}/>
+					<Result title={'hash'} hash={hash}/>
+				</>) : <div></div>}
+
+			
+			
 		</div>
 	)
 }

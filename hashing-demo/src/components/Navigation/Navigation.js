@@ -11,7 +11,7 @@ const Navigation = () => {
           Hash
         </NavLink>
 		<NavLink to="/mining" activeClassName="active">
-          Mining
+          Mine
         </NavLink>
       </div>
     </div>
