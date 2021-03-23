@@ -59,7 +59,12 @@ const Mining = () => {
 						marginTop: "10px",					
 					  }}
 				/>
-				<Button type='submit'>Mine</Button>
+				<Button type='submit' style={{
+						backgroundColor:'darkseagreen', 
+						marginTop: "10px", 
+						fontWeight:'bold', 
+						color:'black'}} 
+					fullWidth>Mine</Button>
 				</form>			
 			</Box>
 
@@ -68,9 +73,6 @@ const Mining = () => {
 					<Result title={'nonce'} hash={nonce}/>
 					<Result title={'hash'} hash={hash}/>
 				</>) : <div></div>}
-
-			
-			
 		</div>
 	)
 }
