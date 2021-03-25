@@ -1,8 +1,7 @@
 import React, { useState } from "react";
 import axios from "axios";
 import "./styles.css";
-import TextField from "@material-ui/core/TextField"; 
-import Box from "@material-ui/core/Box";
+import { TextField, Box, Button } from "@material-ui/core";
 import Result from "./Result/Result";
 import data from "../../data/data";
 
@@ -40,6 +39,18 @@ const HashingComponent = () => {
             value={text.text}
             onChange={(e) => setText({ text: e.target.value })}
           />
+          <Button
+            type="submit"
+            style={{
+              backgroundColor: "darkseagreen",
+              marginTop: "10px",
+              fontWeight: "bold",
+              color: "black",
+            }}
+            fullWidth
+          >
+            Hash
+          </Button>
         </form>
       </Box>
       <Result title={"sha256"} hash={hash} />

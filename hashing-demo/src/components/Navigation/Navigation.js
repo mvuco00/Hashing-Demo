@@ -7,10 +7,10 @@ const Navigation = () => {
     <div className="navbar">
       <div className="logo">HASHING DEMO</div>
       <div className="navbar-links">
-        <NavLink to="/" activeClassName="active">
+        <NavLink to="/" activeClassName="active" exact={true}>
           Hash
         </NavLink>
-		<NavLink to="/mining" activeClassName="active">
+        <NavLink to="/mining" activeClassName="active">
           Mine
         </NavLink>
       </div>

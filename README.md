@@ -1,7 +1,6 @@
 # Hashing & Mining demonstration
 
-> Calculate a hash (aka message digest) of data.
-> Mining demonstration
+> App that demonstrates hashing and mining
 
 <div style="float: right">
 <img alt="React" src="https://img.shields.io/badge/react%20-%2320232a.svg?&style=for-the-badge&logo=react&logoColor=%2361DAFB"/>
@@ -10,4 +9,4 @@
 <img alt="NodeJS" src="https://img.shields.io/badge/node.js%20-%2343853D.svg?&style=for-the-badge&logo=node.js&logoColor=white"/>
 </div>
 
-
+User can calculate a hash (aka message digest) of data or find nonce and hash of mined block.
