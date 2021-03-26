@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import axios from "axios";
-import "./styles.css";
 import { TextField, Box, Button } from "@material-ui/core";
 import Result from "./Result/Result";
 import data from "../../data/data";

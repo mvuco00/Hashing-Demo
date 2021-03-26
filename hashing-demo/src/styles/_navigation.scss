@@ -2,7 +2,7 @@
   display: flex;
   justify-content: space-between;
   padding: 20px;
-  background-color: rgb(20, 20, 20);
+  background-color: $navbar-color;
 }
 
 .logo {
@@ -16,10 +16,10 @@
   text-decoration: none;
   font-size: 18px;
   font-weight: bold;
-  color: rgb(235, 232, 232);
+  color: $navbar-links-color;
   padding: 20px;
 }
 
 .active {
-  background-color: rgba(7, 7, 7, 0.658);
+  background-color: $navbar-color-active;
 }

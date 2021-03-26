@@ -2,7 +2,7 @@ import React from "react";
 import Paper from "@material-ui/core/Paper";
 import { Typography } from "@material-ui/core";
 import Box from "@material-ui/core/Box";
-import "./styles.css";
+
 const Result = ({ title, hash }) => {
   return (
     <>
