@@ -10,4 +10,12 @@
 <img alt="NodeJS" src="https://img.shields.io/badge/node.js%20-%2343853D.svg?&style=for-the-badge&logo=node.js&logoColor=white"/>
 </div>
 
+<br>
+
+<p float="left">
+<img src="images/hash.png" width="400">
+<img src="images/mine.png" width="400">
+
+</p>
+
 User can calculate a hash (aka message digest) of data or find nonce and hash of mined block.
